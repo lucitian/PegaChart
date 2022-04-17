@@ -1,0 +1,14 @@
+{% extends 'directories/index.html' %}
+{% block content %}
+    <div class="pega-container">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="pega-search">
+                <input type="text" class="pega-search-id" id="pega-search-id" name="PegaID">
+                <label>Pega ID</label>
+                <input type="submit" value="SEARCH" class="pega-search-submit">
+            </div>
+            
+        </form>
+    </div>
+{% endblock content %}

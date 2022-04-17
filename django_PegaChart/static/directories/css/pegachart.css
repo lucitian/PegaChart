@@ -1,0 +1,81 @@
+.pega-main {
+    grid-area: 'pega-main';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.pega-container {
+    background-color: #111827;
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.pega-search {
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+
+.pega-search-id {
+    font-family: 'OpenSans', monospace;
+    outline: none;
+    border: 1px solid #232B45;
+    width: 150px;
+    padding: 12px 0 12px 12px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.pega-search .pega-search-id:focus {
+    border: 1px solid #232B45;
+}
+
+.pega-search .pega-search-id:valid + label {
+    bottom: 16px;
+    padding: 0 5px;
+    color: #EDF2F7;
+}
+
+.pega-search .pega-search-id:focus + label {
+    bottom: 42px;
+    padding: 0 5px;
+    color: #EDF2F7;
+}
+
+.pega-search label {
+    font-size: 16px;
+    color: #8d8d8d;
+    position: absolute;
+    bottom: 9px;
+    left: 8.5px;;
+    transition: 0.15s;
+}
+
+.pega-search input[type='text'] {
+    background-color: #0B0F19;
+    color: #EDF2F7;
+}
+
+.pega-search-submit {
+    height: 51px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    background-color: #232B45;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease;
+    font-size: 25px;
+    font-family: 'OpenSans', monospace;
+}
+
+.pega-search-submit:hover {
+    background-color: #0B0F19;
+}

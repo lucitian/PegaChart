@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'directories/css/index.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'directories/css/pegachart.css' %}">
+        <title>PegaChart</title>
+    </head>
+    <body>
+        <main class="index">
+            <div class="title-bar">
+                <div class="title-container">
+                    <h1>PegaChart</h1>
+                </div>
+            </div>
+            <div class="pega-main">
+                {% block content %}{% endblock content %}
+            </div>
+        </main>
+    </body>
+</html>

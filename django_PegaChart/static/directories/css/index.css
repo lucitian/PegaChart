@@ -1,0 +1,46 @@
+@font-face {
+    font-family: OpenSans;
+    src: url('./fonts/OpenSans.ttf');
+}
+
+* {
+    font-family: 'OpenSans', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+body {
+    background-color: #0B0F19;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas: 
+        'title-bar'
+        'pega-main'
+    ;
+}
+
+.title-bar {
+    grid-area: 'title-bar';
+    width: 100%;
+    background-color: #111827;
+}
+
+.title-container {
+    color: white;
+    letter-spacing: 5px;
+    float: left;
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.title-container h1 {
+    font-size: 25px;
+}
