@@ -7,6 +7,6 @@ def index(request):
     if request.method == 'POST':
         pegaID = request.POST['PegaID']
 
-        print(pegaID)
+        print(f"https://api.pegaxy.io/race/history/pega/{pegaID}")
 
     return render(request, 'directories/pegachart.html')
