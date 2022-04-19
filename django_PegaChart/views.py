@@ -1,10 +1,14 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
 from django import forms
+from .api.data_helpers import *
+from .api.pega import Pega
+
+pega_id = None
 
 def index(request):
     if request.method == 'POST':
+        global pega_id
         ctx = {
             'pegaID': None,
             'pegaApiID': None,
@@ -13,6 +17,7 @@ def index(request):
         }
         if request.POST.get('PegaID'):
             requestPegaID = request.POST.get('PegaID')
+            pega_id = requestPegaID
 
             ctx['pegaID'] = requestPegaID
             ctx['pegaApiID'] = f"https://api.pegaxy.io/race/history/pega/{requestPegaID}"
@@ -23,8 +28,6 @@ def index(request):
             requestPegaApiContent = request.POST.get('PegaApiContent')
 
             ctx['pegaApiContent'] = requestPegaApiContent
-
-            print(ctx['pegaApiContent'])
         
             return render(request, 'directories/pegachart.html', ctx)
     else:
