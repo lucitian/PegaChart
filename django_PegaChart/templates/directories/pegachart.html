@@ -20,6 +20,10 @@
             </div>
             <form action="" method="POST">
                 {% csrf_token %}
+                <div class="pega-share">
+                    <input type="text" class="pega-share-input" id="pega-share-input" name="PegaShare">
+                    <label>Percentage Share</label>
+                </div>
                 <div>
                     <textarea class="pega-api-content" name="PegaApiContent"></textarea>
                 </div>

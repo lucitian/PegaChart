@@ -82,6 +82,53 @@
     background-color: #0B0F19;
 }
 
+.pega-share {
+    margin: 20px 0 0 0;
+    position: relative;
+    display: flex;
+    gap: 5px;
+}
+
+.pega-share-input {
+    font-family: 'OpenSans', monospace;
+    outline: none;
+    border: 1px solid #232B45;
+    width: 100%;
+    padding: 12px 0 12px 12px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.pega-share .pega-share-input:focus {
+    border: 1px solid #232B45;
+}
+
+.pega-share .pega-share-input:valid + label {
+    bottom: 16px;
+    padding: 0 5px;
+    color: #EDF2F7;
+}
+
+.pega-share .pega-share-input:focus + label {
+    bottom: 42px;
+    padding: 0 5px;
+    color: #EDF2F7;
+}
+
+.pega-share label {
+    font-size: 16px;
+    color: #8d8d8d;
+    position: absolute;
+    bottom: 9px;
+    left: 8.5px;
+    transition: 0.15s;
+}
+
+.pega-share input[type='text'] {
+    background-color: #0B0F19;
+    color: #EDF2F7;
+}
+
 .pega-instructions {
     margin: 25px 25px 0 25px;
 }
@@ -95,7 +142,7 @@
     resize: none;
     width: 400px;
     height: 500px;
-    margin: 25px 0 0 0;
+    margin: 10px 0 0 0;
     outline: none;
     border: 1px solid #232B45;
     border-radius: 5px;
