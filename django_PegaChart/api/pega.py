@@ -39,3 +39,19 @@ class Pega:
         data_json = json.loads(data.read())['pega']
 
         return data_json['name']
+    
+    @property 
+    def win_rate(self):
+        data = urlopen(f'https://api-apollo.pegaxy.io/v1/game-api/pega/{self.pega_id}')
+
+        data_json = json.loads(data.read())['pega']
+
+        return data_json['win'] / data_json['total_races']
+    
+    @property 
+    def race_history(self):
+        data = list(self.db.find({'pega_id': self.pega_id}))[0]
+        print(data['races'])
+    
+    def add_pega(self, pega):
+        self.db.insert_one(pega)

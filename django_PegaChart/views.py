@@ -28,6 +28,8 @@ def index(request):
             requestPegaApiContent = request.POST.get('PegaApiContent')
 
             ctx['pegaApiContent'] = requestPegaApiContent
+
+            print(Pega(pega_id).race_history)
         
             return render(request, 'directories/pegachart.html', ctx)
     else:
