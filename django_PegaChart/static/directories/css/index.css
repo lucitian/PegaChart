@@ -44,3 +44,7 @@ main {
 .title-container h1 {
     font-size: 25px;
 }
+
+.divider {
+    padding: 10px;
+}

@@ -7,14 +7,16 @@
     height: 100%;
 }
 
-.pega-container {
+.pega-search-container {
     background-color: #111827;
-    height: 200px;
+    min-height: 200px;
     width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
 }
 
 .pega-search {
@@ -27,7 +29,7 @@
     font-family: 'OpenSans', monospace;
     outline: none;
     border: 1px solid #232B45;
-    width: 150px;
+    width: 175px;
     padding: 12px 0 12px 12px;
     font-size: 20px;
     border-radius: 5px;
@@ -54,7 +56,7 @@
     color: #8d8d8d;
     position: absolute;
     bottom: 9px;
-    left: 8.5px;;
+    left: 8.5px;
     transition: 0.15s;
 }
 
@@ -77,5 +79,49 @@
 }
 
 .pega-search-submit:hover {
+    background-color: #0B0F19;
+}
+
+.pega-instructions {
+    margin: 25px 25px 0 25px;
+}
+
+.pega-instructions a {
+    color: #EDF2F7;
+}
+
+.pega-api-content {
+    font-family: 'OpenSans', monospace;
+    resize: none;
+    width: 400px;
+    height: 500px;
+    margin: 25px 0 0 0;
+    outline: none;
+    border: 1px solid #232B45;
+    border-radius: 5px;
+    background-color: #0B0F19;
+    color:#EDF2F7;
+    padding: 5px;
+}
+
+.pega-api-content:focus {
+    border: 1px solid #232B45;
+}
+
+.pega-api-import {
+    height: 51px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+    background-color: #232B45;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease;
+    font-size: 25px;
+    font-family: 'OpenSans', monospace;
+    margin: 10px 0 0 0;
+}
+
+.pega-api-import:hover {
     background-color: #0B0F19;
 }

@@ -1,6 +1,6 @@
 {% extends 'directories/index.html' %}
 {% block content %}
-    <div class="pega-container">
+    <div class="pega-search-container">
         <form action="" method="POST">
             {% csrf_token %}
             <div class="pega-search">
@@ -8,7 +8,20 @@
                 <label>Pega ID</label>
                 <input type="submit" value="SEARCH" class="pega-search-submit">
             </div>
-            
         </form>
+        {% if pegaID != None %}
+            <div class="pega-instructions">
+                <p>Pegaxy ID: {{pegaID}}</p>
+                <a href="{{pegaApiID}}" target="blank">{{pegaApiID}}</a>
+                <div class="divider"></div>
+                <p>1. Open the link provided.</p>
+                <p>2. Copy its content and paste it in the text box below.</p>
+                <p>3. Click import.</p>
+            </div>
+            <div>
+                <textarea name="pega-api-content" class="pega-api-content"></textarea>
+            </div>
+            <input type="submit" value="IMPORT" class="pega-api-import">
+        {% endif %}
     </div>
 {% endblock content %}
