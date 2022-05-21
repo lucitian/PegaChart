@@ -1,0 +1,7 @@
+secret.py
+__pycache__
+db/__pycache__
+objects/__pycache__
+routes/__pycache__
+
+temp/datasets
